@@ -1,0 +1,9 @@
+{
+  "name": "jsinnovia-landing",
+  "version": "1.0.0",
+  "description": "Site officiel JS-Innov.IA",
+  "scripts": {
+    "start": "nginx -g \"daemon off;\"",
+    "build": "echo \"Static site, no build needed\""
+  }
+}
