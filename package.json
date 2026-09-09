@@ -1,9 +1,10 @@
 {
-  "name": "jsinnovia-landing",
+  "name": "pilotyasign-pro",
   "version": "1.0.0",
-  "description": "Site officiel JS-Innov.IA",
+  "private": true,
+  "description": "PilotyaSign Pro by JS-Innov.IA — parcours commercial automatisé",
   "scripts": {
-    "start": "nginx -g \"daemon off;\"",
-    "build": "echo \"Static site, no build needed\""
+    "build": "echo \"Static PilotyaSign Pro build ready\"",
+    "start": "nginx -g \"daemon off;\""
   }
 }
