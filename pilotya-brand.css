@@ -1,0 +1,17 @@
+/* PilotyaSign Pro — identité visuelle officielle validée */
+.mark{
+  background-image:url('/assets/pilotyasign-pro-icon-official.svg')!important;
+  background-size:cover!important;
+  background-position:center!important;
+  background-repeat:no-repeat!important;
+  background-color:transparent!important;
+  color:transparent!important;
+  box-shadow:0 10px 28px rgba(8,118,255,.25)!important;
+  border-radius:14px!important;
+  overflow:hidden;
+}
+.auth-visual .brand .mark{width:54px;height:54px;border-radius:17px!important}
+.brand strong{letter-spacing:-.02em}
+.brand small{letter-spacing:.02em}
+.official-brand-lockup{display:block;width:min(620px,90%);height:auto}
+@media(max-width:620px){.mark{width:40px;height:40px}.auth-visual .brand .mark{width:48px;height:48px}}
