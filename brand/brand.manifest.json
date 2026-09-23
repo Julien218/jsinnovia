@@ -1,0 +1,65 @@
+{
+  "schemaVersion": "1.0",
+  "brand": "PilotyaSign Pro",
+  "status": "official",
+  "locale": "fr-BE",
+  "lastAligned": "2026-09-23",
+  "repository": {
+    "fullName": "Julien218/jsinnovia",
+    "productionBranch": "pilotyasign-pro"
+  },
+  "canonicalSources": {
+    "bible": "brand/BRAND_ADN.md",
+    "existingOfficialDoc": "BRAND-PILOTYASIGN-PRO.md",
+    "runtimeStyle": "pilotya-brand.css"
+  },
+  "identity": {
+    "name": "PilotyaSign Pro",
+    "parentBrand": "JS-Innov.IA",
+    "tagline": "Le parcours commercial automatisé, du premier contact au paiement."
+  },
+  "palette": {
+    "navy": "#071E78",
+    "electricBlue": "#0676FF",
+    "cyan": "#14E6F7",
+    "textNavy": "#071C4A",
+    "secondaryBlue": "#557098",
+    "blueGrey": "#8FA6C7",
+    "white": "#FFFFFF",
+    "iconDeep": "#031438",
+    "iconMid": "#071F59",
+    "iconBlue": "#0A2B78"
+  },
+  "typography": {
+    "primary": "Inter",
+    "fallback": "Segoe UI, Arial, sans-serif"
+  },
+  "assets": {
+    "logo": "assets/pilotyasign-pro-logo-official.svg",
+    "icon": "assets/pilotyasign-pro-icon-official.svg"
+  },
+  "agentPolicy": {
+    "mode": "fail-closed",
+    "readOrder": [
+      "brand/brand.manifest.json",
+      "brand/BRAND_ADN.md",
+      "BRAND-PILOTYASIGN-PRO.md"
+    ],
+    "forbidden": [
+      "drop-Pro-from-name",
+      "generate-logo",
+      "redraw-logo",
+      "recolor-logo",
+      "replace-product-with-jsinnovia-brand",
+      "mix-signelya-adn",
+      "mix-hainoflow-adn"
+    ],
+    "qualityGate": [
+      "official-svg-used",
+      "product-name-complete",
+      "canonical-palette-used",
+      "signature-secondary",
+      "no-cross-brand-contamination"
+    ]
+  }
+}
