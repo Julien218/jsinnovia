@@ -41,3 +41,8 @@ Les réalisations et produits listés sur le site (Synergie Dour, Miss & Mister 
 3. Pour un support d'une marque cliente, basculer vers la Bible de cette marque et ne conserver JS-Innov.IA qu'en crédit si sa règle l'autorise.
 4. Ne jamais fabriquer de logo ou de claim absent des sources.
 5. En cas de conflit entre une ancienne planche et le runtime actuel, bloquer et signaler l'écart.
+
+## Motifs exclusifs d'autres marques
+- La **plume** appartient exclusivement au fil conducteur de campagne **Miss & Mister Dour 2027**.
+- Elle est interdite comme motif d'identité JS-Innov.IA, décor récurrent, halo, particule signature, icône ou élément de logo.
+- Une collaboration ou un crédit JS-Innov.IA sur un support Miss & Mister Dour ne transfère jamais ce motif à la marque mère.
