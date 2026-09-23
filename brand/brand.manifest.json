@@ -1,0 +1,59 @@
+{
+  "schemaVersion": "1.0",
+  "brand": "JS-Innov.IA",
+  "status": "production",
+  "locale": "fr-BE",
+  "lastAligned": "2026-09-23",
+  "repository": {
+    "fullName": "Julien218/jsinnovia",
+    "productionBranch": "main"
+  },
+  "canonicalSources": {
+    "bible": "brand/BRAND_ADN.md",
+    "runtime": "index.html"
+  },
+  "identity": {
+    "name": "JS-Innov.IA",
+    "tagline": "Automatisation intelligente amplifiée par l’humain",
+    "footerSignature": "WHEN VISION MEETS INTELLIGENCE"
+  },
+  "palette": {
+    "gold": "#D4AF37",
+    "goldLight": "#F5CF41",
+    "purple": "#7C3AED",
+    "cyan": "#06B6D4",
+    "background": "#060610",
+    "white": "#FFFFFF"
+  },
+  "typography": {
+    "ui": "Segoe UI, system-ui, sans-serif"
+  },
+  "assets": {
+    "graphicLogo": {
+      "status": "missing-from-production-repository",
+      "policy": "do-not-invent-or-generate"
+    }
+  },
+  "agentPolicy": {
+    "mode": "fail-closed",
+    "readOrder": [
+      "brand/brand.manifest.json",
+      "brand/BRAND_ADN.md",
+      "index.html"
+    ],
+    "forbidden": [
+      "mix-client-brand-assets",
+      "generate-logo",
+      "redraw-logo",
+      "invent-claim",
+      "adopt-client-palette"
+    ],
+    "qualityGate": [
+      "brand-scope-confirmed",
+      "canonical-tokens-used",
+      "no-cross-brand-contamination",
+      "facts-confirmed",
+      "orthography-validated"
+    ]
+  }
+}
