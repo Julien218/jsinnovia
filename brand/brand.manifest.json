@@ -46,14 +46,16 @@
       "generate-logo",
       "redraw-logo",
       "invent-claim",
-      "adopt-client-palette"
+      "adopt-client-palette",
+      "use-miss-mister-feather-motif"
     ],
     "qualityGate": [
       "brand-scope-confirmed",
       "canonical-tokens-used",
       "no-cross-brand-contamination",
       "facts-confirmed",
-      "orthography-validated"
+      "orthography-validated",
+      "exclusive-campaign-motifs-excluded"
     ]
   }
 }
