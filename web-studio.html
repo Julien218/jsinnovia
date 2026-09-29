@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="fr-BE">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#070709">
+  <title>Web Studio | JS-Innov.IA</title>
+  <meta name="description" content="Explorez des concepts de sites web nouvelle génération et visualisez instantanément votre entreprise dans le style de votre choix.">
+  <link rel="canonical" href="https://jsinnovia.com/web-studio.html">
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    :root{--bg:#070709;--panel:rgba(255,255,255,.045);--line:rgba(255,255,255,.10);--gold:#d8b85a;--gold2:#f4dc8a;--text:#f7f7f4;--muted:#aaa9a3}
+    html{scroll-behavior:smooth}
+    body{background:radial-gradient(circle at 50% -20%,rgba(216,184,90,.10),transparent 35%),var(--bg);color:var(--text);font-family:Inter,"Segoe UI",system-ui,sans-serif;line-height:1.5}
+    a{color:inherit;text-decoration:none}
+    header{position:sticky;top:0;z-index:20;backdrop-filter:blur(18px);background:rgba(7,7,9,.70);border-bottom:1px solid var(--line)}
+    .nav{max-width:1380px;margin:auto;padding:16px 24px;display:flex;justify-content:space-between;align-items:center;gap:20px}
+    .brand{font-weight:900;letter-spacing:.05em}.brand span{color:var(--gold)}
+    .navlinks{display:flex;gap:10px;flex-wrap:wrap}
+    .pill,.cta{padding:11px 16px;border-radius:999px;border:1px solid var(--line);font-size:13px}
+    .cta{background:linear-gradient(135deg,var(--gold),var(--gold2));color:#111;border:none;font-weight:800}
+    .hero{max-width:1200px;margin:auto;padding:100px 24px 60px;text-align:center}
+    .eyebrow{display:inline-flex;padding:8px 13px;border:1px solid rgba(216,184,90,.28);border-radius:999px;color:var(--gold2);font-size:12px;letter-spacing:.12em;margin-bottom:26px}
+    h1{font-size:clamp(2.8rem,7vw,6.5rem);line-height:.95;letter-spacing:-.05em;max-width:1000px;margin:0 auto 26px}
+    .shine{background:linear-gradient(90deg,#fff,var(--gold2),#fff);background-size:200% auto;-webkit-background-clip:text;color:transparent;animation:shine 5s linear infinite}
+    @keyframes shine{to{background-position:200% center}}
+    .lead{max-width:760px;margin:auto;color:var(--muted);font-size:clamp(1rem,2vw,1.25rem)}
+    .hero-actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:34px}
+    .btn{padding:15px 22px;border-radius:14px;border:1px solid var(--line);background:var(--panel);font-weight:750}
+    .btn.gold{background:linear-gradient(135deg,var(--gold),var(--gold2));color:#111;border:none}
+    .toolbar{max-width:1380px;margin:28px auto 26px;padding:0 24px;display:flex;justify-content:space-between;gap:16px;align-items:center;flex-wrap:wrap}
+    .filters{display:flex;gap:8px;flex-wrap:wrap}
+    .filter{background:transparent;color:#d7d7d2;border:1px solid var(--line);padding:9px 14px;border-radius:999px;cursor:pointer}
+    .filter.active{background:#f4f2e9;color:#0c0c0d}
+    .grid{max-width:1380px;margin:auto;padding:0 24px 100px;display:grid;grid-template-columns:repeat(12,1fr);gap:22px}
+    .card{grid-column:span 6;background:var(--panel);border:1px solid var(--line);border-radius:28px;overflow:hidden;transition:.35s ease;position:relative}
+    .card:hover{transform:translateY(-7px);border-color:rgba(216,184,90,.35);box-shadow:0 30px 90px rgba(0,0,0,.35)}
+    .preview{aspect-ratio:16/10;padding:18px;position:relative;overflow:hidden}
+    .browser{height:100%;border-radius:18px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.35);transform:perspective(1100px) rotateX(1.3deg);transition:.45s ease}
+    .card:hover .browser{transform:perspective(1100px) rotateX(0deg) scale(1.02)}
+    .bar{height:30px;background:rgba(255,255,255,.86);display:flex;align-items:center;padding:0 10px;gap:5px}
+    .dot{width:7px;height:7px;border-radius:50%;background:#777}
+    .screen{height:calc(100% - 30px);display:flex;flex-direction:column;justify-content:space-between;padding:26px}
+    .screen h3{font-size:clamp(1.5rem,3vw,3rem);line-height:1}.screen p{font-size:12px;opacity:.75;max-width:52%}
+    .screen .mini{align-self:flex-start;padding:8px 12px;border-radius:999px;font-size:10px;border:1px solid currentColor}
+    .aura .preview{background:linear-gradient(145deg,#35180f,#a7552a)}
+    .aura .screen{background:radial-gradient(circle at 80% 20%,#f7ab58 0 2%,transparent 30%),linear-gradient(135deg,#160f0c,#5b2214);color:#fff1df}
+    .nova .preview{background:linear-gradient(145deg,#071e2e,#064e5a)}
+    .nova .screen{background:linear-gradient(135deg,#04131d,#083844);color:#dffcff}
+    .elegance .preview{background:linear-gradient(145deg,#e6d7d0,#75615d)}
+    .elegance .screen{background:linear-gradient(135deg,#f3ebe7,#b7a19a);color:#271d1a}
+    .pulse .preview{background:linear-gradient(145deg,#17072b,#4c0c85)}
+    .pulse .screen{background:radial-gradient(circle at 75% 35%,#ff4df3 0 4%,transparent 28%),linear-gradient(135deg,#0d0418,#3f0768);color:#fff}
+    .atelier .preview{background:linear-gradient(145deg,#232323,#78705b)}
+    .atelier .screen{background:linear-gradient(135deg,#0d0d0d,#3f3a2c);color:#f1e7cc}
+    .zenith .preview{background:linear-gradient(145deg,#071815,#2d6a5a)}
+    .zenith .screen{background:linear-gradient(135deg,#06110f,#1f4c41);color:#e4fff5}
+    .meta{padding:20px 22px 24px;display:flex;justify-content:space-between;align-items:end;gap:16px}
+    .meta h2{font-size:1.15rem}.meta p{font-size:.85rem;color:var(--muted);margin-top:4px}
+    .choose{padding:10px 14px;border-radius:12px;border:1px solid rgba(216,184,90,.35);color:var(--gold2);font-weight:700;background:rgba(216,184,90,.06);cursor:pointer;white-space:nowrap}
+    .studio{max-width:1180px;margin:0 auto 110px;padding:0 24px}
+    .studio-box{border:1px solid var(--line);background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.025));border-radius:30px;padding:34px}
+    .studio h2{font-size:clamp(2rem,5vw,4rem);letter-spacing:-.04em;margin-bottom:10px}.studio p{color:var(--muted)}
+    .form{display:grid;grid-template-columns:1fr 1fr auto;gap:10px;margin-top:28px}
+    input,select{background:#0d0d10;color:#fff;border:1px solid var(--line);border-radius:14px;padding:15px 16px;outline:none}
+    .result{margin-top:20px;padding:26px;border-radius:20px;border:1px solid var(--line);background:#0a0a0c}
+    .result strong{color:var(--gold2)}
+    footer{padding:42px 24px;border-top:1px solid var(--line);color:#8b8a84;text-align:center}
+    @media(max-width:900px){.card{grid-column:span 12}.form{grid-template-columns:1fr}.navlinks .pill{display:none}.hero{padding-top:70px}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="nav">
+    <a href="/" class="brand">JS-<span>Innov.IA</span> / Web Studio</a>
+    <div class="navlinks">
+      <a class="pill" href="#gallery">Explorer</a>
+      <a class="pill" href="#studio">Tester mon entreprise</a>
+      <a class="cta" href="mailto:contact@jsinnovia.com?subject=Projet%20Web%20Studio">Démarrer un projet</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="eyebrow">WEB DESIGN · IA · AUTOMATISATION · EXPÉRIENCE</div>
+  <h1>Choisissez un style.<br><span class="shine">Voyez déjà votre futur site.</span></h1>
+  <p class="lead">Une galerie de concepts nouvelle génération pensée pour les entreprises, commerces, indépendants et événements. Sélectionnez une direction visuelle, personnalisez-la, puis confiez-nous la réalisation complète.</p>
+  <div class="hero-actions">
+    <a class="btn gold" href="#gallery">Explorer les concepts →</a>
+    <a class="btn" href="#studio">Tester avec mon entreprise</a>
+  </div>
+</section>
+
+<div class="toolbar" id="gallery">
+  <div>
+    <strong>Collection Web Studio</strong>
+    <div style="color:#8f8e89;font-size:13px;margin-top:4px">Concepts originaux JS-Innov.IA — adaptables à votre identité</div>
+  </div>
+  <div class="filters">
+    <button class="filter active" data-filter="all">Tous</button>
+    <button class="filter" data-filter="business">Business</button>
+    <button class="filter" data-filter="commerce">Commerce</button>
+    <button class="filter" data-filter="event">Événement</button>
+    <button class="filter" data-filter="premium">Premium</button>
+  </div>
+</div>
+
+<main class="grid">
+  <article class="card aura" data-cat="commerce premium">
+    <div class="preview"><div class="browser"><div class="bar"><i class="dot"></i><i class="dot"></i><i class="dot"></i></div><div class="screen"><div><div class="mini">ARTISAN · GASTRONOMIE</div><h3 style="margin-top:18px">AURA</h3></div><p>Une présence chaude, élégante et immersive pour restaurants, artisans et maisons de bouche.</p></div></div></div>
+    <div class="meta"><div><h2>Aura</h2><p>Restaurant · Artisan · Premium</p></div><button class="choose" data-style="Aura">Je veux ce style</button></div>
+  </article>
+
+  <article class="card nova" data-cat="business premium">
+    <div class="preview"><div class="browser"><div class="bar"><i class="dot"></i><i class="dot"></i><i class="dot"></i></div><div class="screen"><div><div class="mini">STRATÉGIE · CONSEIL</div><h3 style="margin-top:18px">NOVA</h3></div><p>Un univers net, technologique et crédible pour PME, cabinets, services et solutions B2B.</p></div></div></div>
+    <div class="meta"><div><h2>Nova</h2><p>PME · Conseil · Technologie</p></div><button class="choose" data-style="Nova">Je veux ce style</button></div>
+  </article>
+
+  <article class="card elegance" data-cat="commerce premium">
+    <div class="preview"><div class="browser"><div class="bar"><i class="dot"></i><i class="dot"></i><i class="dot"></i></div><div class="screen"><div><div class="mini">MODE · BEAUTÉ</div><h3 style="margin-top:18px">ÉLÉGANCE</h3></div><p>Minimalisme éditorial, douceur des matières et image haut de gamme pour beauté et lifestyle.</p></div></div></div>
+    <div class="meta"><div><h2>Élégance</h2><p>Mode · Beauté · Lifestyle</p></div><button class="choose" data-style="Élégance">Je veux ce style</button></div>
+  </article>
+
+  <article class="card pulse" data-cat="event premium">
+    <div class="preview"><div class="browser"><div class="bar"><i class="dot"></i><i class="dot"></i><i class="dot"></i></div><div class="screen"><div><div class="mini">LIVE · CULTURE</div><h3 style="margin-top:18px">PULSE</h3></div><p>Visuel électrique et très vivant pour festivals, concours, spectacles et événements.</p></div></div></div>
+    <div class="meta"><div><h2>Pulse</h2><p>Événement · Culture · Spectacle</p></div><button class="choose" data-style="Pulse">Je veux ce style</button></div>
+  </article>
+
+  <article class="card atelier" data-cat="business commerce">
+    <div class="preview"><div class="browser"><div class="bar"><i class="dot"></i><i class="dot"></i><i class="dot"></i></div><div class="screen"><div><div class="mini">SAVOIR-FAIRE · LOCAL</div><h3 style="margin-top:18px">ATELIER</h3></div><p>Une identité sobre, tactile et rassurante pour métiers de proximité et savoir-faire locaux.</p></div></div></div>
+    <div class="meta"><div><h2>Atelier</h2><p>Indépendant · Artisan · Local</p></div><button class="choose" data-style="Atelier">Je veux ce style</button></div>
+  </article>
+
+  <article class="card zenith" data-cat="business premium">
+    <div class="preview"><div class="browser"><div class="bar"><i class="dot"></i><i class="dot"></i><i class="dot"></i></div><div class="screen"><div><div class="mini">IMMOBILIER · SERVICE</div><h3 style="margin-top:18px">ZENITH</h3></div><p>Une interface calme et premium pour immobilier, architecture et services haut de gamme.</p></div></div></div>
+    <div class="meta"><div><h2>Zenith</h2><p>Immobilier · Architecture · Premium</p></div><button class="choose" data-style="Zenith">Je veux ce style</button></div>
+  </article>
+</main>
+
+<section class="studio" id="studio">
+  <div class="studio-box">
+    <h2>Projetez votre entreprise.</h2>
+    <p>Saisissez votre nom et votre secteur. Le studio prépare une première direction à partir du style sélectionné.</p>
+    <div class="form">
+      <input id="company" placeholder="Nom de votre entreprise">
+      <select id="sector">
+        <option>Commerce</option><option>Restaurant / Horeca</option><option>PME / Service</option><option>Beauté / Mode</option><option>Événement</option><option>Immobilier</option><option>Association</option><option>Autre</option>
+      </select>
+      <button class="btn gold" id="generate">Visualiser</button>
+    </div>
+    <div class="result" id="result">Style sélectionné : <strong id="selected">Nova</strong><br><span id="proposal">Ajoutez le nom de votre entreprise pour préparer votre projection.</span></div>
+  </div>
+</section>
+
+<footer>© 2026 JS-Innov.IA — Web Studio · Automatisation intelligente amplifiée par l’HUMAIN</footer>
+
+<script>
+  let style='Nova';
+  const selected=document.getElementById('selected');
+  const proposal=document.getElementById('proposal');
+  document.querySelectorAll('.filter').forEach(b=>b.addEventListener('click',()=>{
+    document.querySelectorAll('.filter').forEach(x=>x.classList.remove('active')); b.classList.add('active');
+    const f=b.dataset.filter;
+    document.querySelectorAll('.card').forEach(c=>c.style.display=(f==='all'||c.dataset.cat.includes(f))?'':'none');
+  }));
+  document.querySelectorAll('.choose').forEach(b=>b.addEventListener('click',()=>{
+    style=b.dataset.style; selected.textContent=style; document.getElementById('studio').scrollIntoView({behavior:'smooth'});
+  }));
+  document.getElementById('generate').addEventListener('click',()=>{
+    const company=document.getElementById('company').value.trim()||'Votre entreprise';
+    const sector=document.getElementById('sector').value;
+    proposal.innerHTML='<strong>'+company+'</strong> · '+sector+'<br>Direction proposée : univers <strong>'+style+'</strong>, adapté à votre identité, vos couleurs, vos contenus et vos objectifs commerciaux.';
+  });
+</script>
+</body>
+</html>
